@@ -8,10 +8,14 @@ sentence-transformers==3.0.1
 chromadb==0.5.5
 
 # LLM for grounded generation — free tier at console.groq.com
-groq==0.11.0
+# (>=1.0 needed for compatibility with httpx 0.28+; 0.11 passes a removed `proxies` kwarg)
+groq>=1.4.0
 
 # Config / env
 python-dotenv==1.0.1
+
+# Query interface (web UI)
+gradio>=6.9.0
 
 # Evaluation + notebook query interface
 pandas==2.2.2
